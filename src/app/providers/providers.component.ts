@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Provider } from '../provider';
+import { PROVIDERS } from '../mock-providers';
 
 @Component({
   selector: 'app-providers',
@@ -7,10 +7,7 @@ import { Provider } from '../provider';
   styleUrls: ['./providers.component.css'],
 })
 export class ProvidersComponent implements OnInit {
-  provider: Provider = {
-    id: 1,
-    name: 'audiomachine',
-  };
+  providers = PROVIDERS;
   constructor() {}
 
   ngOnInit(): void {}

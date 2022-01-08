@@ -1,0 +1,16 @@
+.providers {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.providers li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  padding: 1em;
+}
+
+.providers li:nth-child(odd) {
+  background: #f8f8f8;
+}
