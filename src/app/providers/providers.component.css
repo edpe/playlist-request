@@ -1,13 +1,28 @@
 .providers {
-  margin: 0 0 2em 0;
+  column-count: 1;
   list-style-type: none;
   padding: 0;
 }
 
+@media (min-width: 640px) {
+  .providers {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1080px) {
+  .providers {
+    column-count: 3;
+  }
+}
+
 .providers li {
+  display: inline-block;
+  justify-self: center;
   cursor: pointer;
   position: relative;
-  left: 0;
+  margin-right: 2em;
+  width: 90%;
   padding: 1em;
 }
 
