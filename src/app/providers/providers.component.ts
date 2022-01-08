@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PROVIDERS } from '../mock-providers';
+import { ProvidersService } from '../providers.service';
+import { Provider } from '../provider';
 
 @Component({
   selector: 'app-providers',
@@ -7,8 +8,14 @@ import { PROVIDERS } from '../mock-providers';
   styleUrls: ['./providers.component.css'],
 })
 export class ProvidersComponent implements OnInit {
-  providers = PROVIDERS;
-  constructor() {}
+  providers: Provider[] = [];
+  constructor(private providersService: ProvidersService) {}
 
-  ngOnInit(): void {}
+  getProviders(): void {
+    this.providers = this.providersService.getProviders();
+  }
+
+  ngOnInit(): void {
+    this.getProviders();
+  }
 }
