@@ -27,8 +27,9 @@
         | sort: ['title', sortDirection]
     "
   >
-    <label>
-      <input type="checkbox" id="{{ provider.id }}" />
+    <label class="provider">
+      <input class="visuallyHidden" type="checkbox" id="{{ provider.id }}" />
+      <span class="customCheckbox"></span>
       {{ provider.title | titlecase }}
     </label>
   </li>

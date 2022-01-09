@@ -20,7 +20,15 @@ h2 {
   }
 }
 
-.providers > li {
+.providers > li:nth-child(odd) {
+  background: #eff0f0;
+}
+
+.providers > li:hover {
+  background: #cddeee;
+}
+
+.provider {
   display: inline-block;
   justify-self: center;
   cursor: pointer;
@@ -28,10 +36,7 @@ h2 {
   width: 90%;
   padding: 1em;
   color: #383839;
-}
-
-.providers > li:nth-child(odd) {
-  background: #eff0f0;
+  align-items: center;
 }
 
 .searchBar {
@@ -58,4 +63,24 @@ h2 {
   border: 0px;
   background-color: #fff;
   color: #383839;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.provider input:checked + .customCheckbox {
+  position: absolute;
+  right: 0;
+  margin-right: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url("../../assets/images/tick.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
 }
