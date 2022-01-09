@@ -9,10 +9,17 @@ import { Provider } from '../provider';
 })
 export class ProvidersComponent implements OnInit {
   providers: Provider[] = [];
+  providerTitle = '';
+  sortDirection = 'ascending';
+
   constructor(private providersService: ProvidersService) {}
 
   getProviders(): void {
     this.providers = this.providersService.getProviders();
+  }
+
+  onSortDirectionChange(sortDirection: string): void {
+    this.sortDirection = sortDirection;
   }
 
   ngOnInit(): void {

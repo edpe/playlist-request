@@ -1,8 +1,26 @@
+<input [(ngModel)]="providerTitle" aria-label="Search for a provider" />
+
+<select
+  [(ngModel)]="sortDirection"
+  aria-label="toggle sort direction"
+  (change)="onSortDirectionChange(sortDirection)"
+>
+  <option value="ascending">View A-Z</option>
+  <option value="descending">View Z-A</option>
+</select>
+
 <h2>Select providers</h2>
 <ul class="providers">
-  <li *ngFor="let provider of providers">
-    <mat-checkbox id="{{ provider.id }}">{{
-      provider.name | titlecase
-    }}</mat-checkbox>
+  <li
+    *ngFor="
+      let provider of providers
+        | filter: providerTitle:'title'
+        | sort: ['title', sortDirection]
+    "
+  >
+    <label>
+      <input type="checkbox" id="{{ provider.id }}" />
+      {{ provider.title | titlecase }}
+    </label>
   </li>
 </ul>
