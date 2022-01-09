@@ -11,6 +11,7 @@ export class ProvidersComponent implements OnInit {
   providers: Provider[] = [];
   providerTitle = '';
   sortDirection = 'ascending';
+  selectedProviders: Provider[] = [];
 
   constructor(private providersService: ProvidersService) {}
 
@@ -20,6 +21,25 @@ export class ProvidersComponent implements OnInit {
 
   onSortDirectionChange(sortDirection: string): void {
     this.sortDirection = sortDirection;
+  }
+
+  addOrRemoveProviders(provider: Provider): void {
+    if (this.selectedProviders.includes(provider)) {
+      this.selectedProviders = this.selectedProviders.filter(
+        (p) => p.id !== provider.id
+      );
+      provider.selected = false;
+    } else {
+      this.selectedProviders.push(provider);
+      provider.selected = true;
+    }
+  }
+
+  removeProvider(selectedProvider: Provider): void {
+    this.selectedProviders = this.selectedProviders.filter(
+      (p) => p.id !== selectedProvider.id
+    );
+    selectedProvider.selected = false;
   }
 
   ngOnInit(): void {

@@ -19,18 +19,43 @@
   </div>
 </section>
 
-<ul class="providers">
-  <li
-    *ngFor="
-      let provider of providers
-        | filter: providerTitle:'title'
-        | sort: ['title', sortDirection]
-    "
-  >
-    <label class="provider">
-      <input class="visuallyHidden" type="checkbox" id="{{ provider.id }}" />
-      <span class="customCheckbox"></span>
-      {{ provider.title | titlecase }}
-    </label>
-  </li>
-</ul>
+<section id="selectedProviders">
+  <ul class="selectedProviders">
+    <li
+      class="selectedProvider"
+      *ngFor="let selectedProvider of selectedProviders"
+    >
+      <button
+        class="removeProvider"
+        (click)="removeProvider(selectedProvider)"
+        [attr.aria-label]="'Remove provider ' + selectedProvider.title"
+      >
+        {{ selectedProvider.title }}
+      </button>
+    </li>
+  </ul>
+</section>
+
+<section id="providerList">
+  <ul class="providers">
+    <li
+      *ngFor="
+        let provider of providers
+          | filter: providerTitle:'title'
+          | sort: ['title', sortDirection]
+      "
+    >
+      <label class="provider">
+        <input
+          class="visuallyHidden"
+          type="checkbox"
+          id="{{ provider.id }}"
+          (change)="addOrRemoveProviders(provider)"
+          [checked]="provider.selected"
+        />
+        <span class="customCheckbox"></span>
+        {{ provider.title | titlecase }}
+      </label>
+    </li>
+  </ul>
+</section>
