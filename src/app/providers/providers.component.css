@@ -99,7 +99,7 @@ h2 {
 .selectedProvider {
   background-color: #6495ed;
   border-radius: 25px;
-  margin-right: 0.5em;
+  margin: 0.5em;
   align-items: center;
 }
 
