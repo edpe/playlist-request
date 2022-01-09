@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+h2 {
+  color: #383839;
+}
+
 @media (min-width: 640px) {
   .providers {
     column-count: 2;
@@ -16,16 +20,42 @@
   }
 }
 
-.providers li {
+.providers > li {
   display: inline-block;
   justify-self: center;
   cursor: pointer;
   position: relative;
-  margin-right: 2em;
   width: 90%;
   padding: 1em;
+  color: #383839;
 }
 
-.providers li:nth-child(odd) {
-  background: #f8f8f8;
+.providers > li:nth-child(odd) {
+  background: #eff0f0;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.providerSearch {
+  padding: 0.5em;
+  border: 1px solid #c2c3c4;
+  margin-right: 1em;
+  color: #383839;
+}
+
+.sortDirection {
+  border: 1px solid #c2c3c4;
+  padding: 0.5em;
+  border-radius: 2px;
+  margin-right: 0.5em;
+}
+
+.sortDirection > select {
+  outline: 0px;
+  border: 0px;
+  background-color: #fff;
+  color: #383839;
 }

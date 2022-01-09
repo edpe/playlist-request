@@ -1,15 +1,24 @@
-<input [(ngModel)]="providerTitle" aria-label="Search for a provider" />
-
-<select
-  [(ngModel)]="sortDirection"
-  aria-label="toggle sort direction"
-  (change)="onSortDirectionChange(sortDirection)"
->
-  <option value="ascending">View A-Z</option>
-  <option value="descending">View Z-A</option>
-</select>
-
 <h2>Select providers</h2>
+
+<section id="searchBar" class="searchBar" role="search">
+  <input
+    class="providerSearch"
+    [(ngModel)]="providerTitle"
+    aria-label="Search for a provider"
+  />
+  <div class="sortDirection">
+    <select
+      [(ngModel)]="sortDirection"
+      aria-label="toggle sort direction"
+      (change)="onSortDirectionChange(sortDirection)"
+      [value]="sortDirection"
+    >
+      <option value="ascending">View A-Z</option>
+      <option value="descending">View Z-A</option>
+    </select>
+  </div>
+</section>
+
 <ul class="providers">
   <li
     *ngFor="

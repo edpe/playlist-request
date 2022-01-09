@@ -9,9 +9,10 @@ import { ProvidersComponent } from './providers/providers.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './Pipes/filter.pipe';
 import { SortPipe } from './Pipes/sort.pipe';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
-  declarations: [AppComponent, ProvidersComponent, FilterPipe, SortPipe],
+  declarations: [AppComponent, ProvidersComponent, FilterPipe, SortPipe, LayoutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
