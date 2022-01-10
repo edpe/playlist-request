@@ -16,9 +16,16 @@ h2 {
 .providerSearch {
   padding: 0.5em;
   border: 1px solid #c2c3c4;
+  border-radius: 2px;
   margin-right: 1em;
   color: #383839;
-  min-width: 300px;
+  min-width: 160px;
+}
+
+@media (min-width: 640px) {
+  .providerSearch {
+    min-width: 300px;
+  }
 }
 
 .providerSearch:focus {
@@ -38,7 +45,7 @@ h2 {
   border: 1px solid #c2c3c4;
   padding: 0.5em;
   border-radius: 2px;
-  margin-right: 0.5em;
+  min-width: 100px;
 }
 
 .sortDirection:focus-within {
@@ -123,14 +130,71 @@ h2 {
   flex-shrink: 0;
 }
 
+.selectedProviderWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.continueDisabled {
+  position: relative;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em;
+  max-height: 20px;
+  min-width: 100px;
+  background-color: #c6c7c7;
+}
+
+.continueDisabled:after {
+  position: absolute;
+  right: 10px; /* center with text */
+  top: 3px; /* center with text */
+  content: "\2192";
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.continueDisabled:hover {
+  background-color: #c6c7c7;
+}
+
+.continueEnabled {
+  position: relative;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  background-color: #6495ed;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em;
+  max-height: 20px;
+  min-width: 100px;
+}
+
+.continueEnabled:hover {
+  background-color: #5c85d6;
+}
+
+.continueEnabled:after {
+  position: absolute;
+  right: 10px; /* center with text */
+  top: 3px; /* center with text */
+  content: "\2192";
+  color: #fff;
+  font-size: 1.5em;
+}
+
 .selectedProviders {
   list-style-type: none;
   padding: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  margin-top: 1em;
+  margin: 0;
 }
 
 .selectedProvider {

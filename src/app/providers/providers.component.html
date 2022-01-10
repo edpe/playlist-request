@@ -22,20 +22,31 @@
 </section>
 
 <section id="selectedProviders">
-  <ul class="selectedProviders">
-    <li
-      class="selectedProvider"
-      *ngFor="let selectedProvider of selectedProviders"
-    >
-      <button
-        class="removeProvider"
-        (click)="removeProvider(selectedProvider)"
-        [attr.aria-label]="'Remove provider ' + selectedProvider.title"
+  <div class="selectedProviderWrapper">
+    <ul class="selectedProviders">
+      <li
+        class="selectedProvider"
+        *ngFor="let selectedProvider of selectedProviders"
       >
-        {{ selectedProvider.title }}
-      </button>
-    </li>
-  </ul>
+        <button
+          class="removeProvider"
+          (click)="removeProvider(selectedProvider)"
+          [attr.aria-label]="'Remove provider ' + selectedProvider.title"
+        >
+          {{ selectedProvider.title }}
+        </button>
+      </li>
+    </ul>
+    <a
+      [ngClass]="{
+        continueDisabled: !selectedProviders.length,
+        continueEnabled: selectedProviders.length
+      }"
+      [routerLink]="isProviderSelected() ? ['/playlist-request-form'] : ['']"
+    >
+      continue
+    </a>
+  </div>
 </section>
 
 <section id="providerList">

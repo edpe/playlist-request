@@ -42,6 +42,10 @@ export class ProvidersComponent implements OnInit {
     selectedProvider.selected = false;
   }
 
+  isProviderSelected(): boolean {
+    return this.selectedProviders.length > 0;
+  }
+
   ngOnInit(): void {
     this.getProviders();
   }

@@ -10,9 +10,17 @@ import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './Pipes/filter.pipe';
 import { SortPipe } from './Pipes/sort.pipe';
 import { LayoutComponent } from './layout/layout.component';
+import { PlaylistRequestFormComponent } from './playlist-request-form/playlist-request-form.component';
 
 @NgModule({
-  declarations: [AppComponent, ProvidersComponent, FilterPipe, SortPipe, LayoutComponent],
+  declarations: [
+    AppComponent,
+    ProvidersComponent,
+    FilterPipe,
+    SortPipe,
+    LayoutComponent,
+    PlaylistRequestFormComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
