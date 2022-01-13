@@ -2,7 +2,7 @@
 
 ### Visit https://playlist-request.vercel.app/ to see the deployed version
 
-![image](https://user-images.githubusercontent.com/32434854/149302127-136568f6-edfb-4fa8-a82b-adce2964df1b.png)
+![image](https://user-images.githubusercontent.com/32434854/149302253-138795b8-5a57-4c78-8b87-b0b420c69d1c.png)
 
 
 **Features:**
