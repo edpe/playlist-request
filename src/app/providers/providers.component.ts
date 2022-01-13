@@ -35,7 +35,7 @@ export class ProvidersComponent implements OnInit {
     }
   }
 
-  removeProvider(selectedProvider: Provider): void {
+  removeSelectedProvider(selectedProvider: Provider): void {
     this.selectedProviders = this.selectedProviders.filter(
       (p) => p.id !== selectedProvider.id
     );

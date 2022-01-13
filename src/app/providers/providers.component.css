@@ -14,10 +14,10 @@ h2 {
 }
 
 .providerSearch {
-  padding: 0.5em;
+  padding: 0.5rem;
   border: 1px solid #c2c3c4;
   border-radius: 2px;
-  margin-right: 1em;
+  margin-right: 1rem;
   color: #383839;
   min-width: 160px;
 }
@@ -43,7 +43,7 @@ h2 {
 
 .sortDirection {
   border: 1px solid #c2c3c4;
-  padding: 0.5em;
+  padding: 0.5rem;
   border-radius: 2px;
   min-width: 100px;
 }
@@ -53,8 +53,8 @@ h2 {
 }
 
 .sortDirection > select {
-  outline: 0px;
-  border: 0px;
+  outline: 0;
+  border: 0;
   background-color: #fff;
   color: #383839;
 }
@@ -94,10 +94,10 @@ h2 {
   cursor: pointer;
   position: relative;
   width: 90%;
-  padding: 1em;
+  padding: 1rem;
   color: #383839;
   align-items: center;
-  font-size: 1.25em;
+  font-size: 1rem;
   border: 1px solid transparent;
   border-radius: 2px;
 }
@@ -109,9 +109,9 @@ h2 {
 .provider input:checked + .customCheckbox {
   position: absolute;
   right: 0;
-  margin-right: 1em;
-  width: 1em;
-  height: 1em;
+  margin-right: 1rem;
+  width: 1rem;
+  height: 1rem;
   background-image: url("../../assets/images/check-mark-circle.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -121,9 +121,9 @@ h2 {
 .provider input + .customCheckbox {
   position: absolute;
   right: 0;
-  margin-right: 1em;
-  width: 1em;
-  height: 1em;
+  margin-right: 1rem;
+  width: 1rem;
+  height: 1rem;
   background-image: url("../../assets/images/plus-circle.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -133,7 +133,7 @@ h2 {
 .selectedProviderWrapper {
   display: flex;
   justify-content: space-between;
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 .continueDisabled {
@@ -143,23 +143,20 @@ h2 {
   border-radius: 2px;
   color: #fff;
   text-decoration: none;
-  padding: 0.5em;
+  padding: 0.5rem;
   max-height: 20px;
   min-width: 100px;
   background-color: #c6c7c7;
+  cursor: not-allowed;
 }
 
 .continueDisabled:after {
   position: absolute;
-  right: 10px; /* center with text */
-  top: 3px; /* center with text */
-  content: "\2192";
+  right: 10px; /* center arrow with text vertically */
+  top: 3px; /* center arrow with text vertically */
+  content: "\2192"; /* unicode arrow symbol */
   color: #fff;
-  font-size: 1.5em;
-}
-
-.continueDisabled:hover {
-  background-color: #c6c7c7;
+  font-size: 1.5rem;
 }
 
 .continueEnabled {
@@ -170,9 +167,10 @@ h2 {
   background-color: #6495ed;
   color: #fff;
   text-decoration: none;
-  padding: 0.5em;
+  padding: 0.5rem;
   max-height: 20px;
   min-width: 100px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .continueEnabled:hover {
@@ -181,11 +179,11 @@ h2 {
 
 .continueEnabled:after {
   position: absolute;
-  right: 10px; /* center with text */
-  top: 3px; /* center with text */
-  content: "\2192";
+  right: 10px; /* center arrow with text vertically */
+  top: 3px; /* center arrow with text vertically */
+  content: "\2192"; /* unicode arrow symbol */
   color: #fff;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .selectedProviders {
@@ -200,8 +198,9 @@ h2 {
 .selectedProvider {
   background-color: #6495ed;
   border-radius: 25px;
-  margin: 0.5em;
+  margin: 0.5rem;
   align-items: center;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .selectedProvider:hover {
@@ -214,13 +213,13 @@ h2 {
   background-color: transparent;
   border: none;
   color: #fff;
-  padding: 0.25em 1em;
+  padding: 0.25rem 0.75rem;
   cursor: pointer;
 }
 
 .selectedProvider > button:after {
-  content: "\2715";
+  content: "\2715"; /* unicode plus symbol */
   color: #fff;
-  font-size: 1.5em;
-  padding-left: 0.5em;
+  font-size: 1rem;
+  padding-left: 0.25rem;
 }

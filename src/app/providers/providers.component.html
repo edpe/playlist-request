@@ -29,8 +29,8 @@
         *ngFor="let selectedProvider of selectedProviders"
       >
         <button
-          class="removeProvider"
-          (click)="removeProvider(selectedProvider)"
+          class="removeSelectedProvider"
+          (click)="removeSelectedProvider(selectedProvider)"
           [attr.aria-label]="'Remove provider ' + selectedProvider.title"
         >
           {{ selectedProvider.title }}
@@ -62,7 +62,7 @@
         <input
           class="visuallyHidden"
           type="checkbox"
-          id="{{ provider.id }}"
+          id="{{ provider.title }}"
           (change)="addOrRemoveProviders(provider)"
           [checked]="provider.selected"
         />
