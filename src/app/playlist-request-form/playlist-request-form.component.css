@@ -1,0 +1,101 @@
+.formGroup {
+  margin: 1.5rem 0;
+}
+
+.formLabel {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.formInput {
+  padding: 0.5rem;
+  border: 1px solid #c2c3c4;
+  border-radius: 2px;
+  margin-right: 1rem 0 0 1rem;
+  color: #383839;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .formInput {
+    min-width: 300px;
+  }
+}
+
+.formInput:focus {
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+
+.formInput:focus-visible {
+  outline: 0;
+}
+
+.formInput:focus::placeholder {
+  color: transparent;
+}
+
+.formTextarea {
+  padding: 0.5rem;
+  border: 1px solid #c2c3c4;
+  border-radius: 2px;
+  margin-right: 1rem;
+  color: #383839;
+  width: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  min-height: 300px;
+  resize: none;
+}
+
+@media (min-width: 640px) {
+  .formTextarea {
+    min-width: 300px;
+  }
+}
+
+.formTextarea:focus {
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+
+.formTextarea:focus-visible {
+  outline: 0;
+}
+
+.formTextarea:focus::placeholder {
+  color: transparent;
+}
+
+.formSubmit {
+  position: relative;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  background-color: #6495ed;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+.formSubmit:hover {
+  background-color: #5c85d6;
+}
+
+.asteriskRequired {
+  width: 0.5rem;
+  height: 0.5rem;
+  fill: red;
+  vertical-align: top;
+  margin-right: 0.25rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}

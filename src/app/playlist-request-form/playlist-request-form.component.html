@@ -1,1 +1,52 @@
-<p>playlist-request-form works!</p>
+<h2>Add details</h2>
+
+<form>
+  <div class="formGroup">
+    <p>
+      <img
+        class="asteriskRequired"
+        src="../../assets/images/asterisk.svg"
+        role="presentation"
+        focusable="false"
+      />indicates a required field
+    </p>
+    <label class="formLabel" for="jobTitle"
+      ><img
+        class="asteriskRequired"
+        src="../../assets/images/asterisk.svg"
+        role="presentation"
+        focusable="false"
+      />job title
+      <div class="visually-hidden">required</div></label
+    >
+    <input
+      class="formInput"
+      type="text"
+      id="jobTitle"
+      name="jobTitle"
+      required
+      placeholder="Required"
+    />
+  </div>
+  <div class="formGroup">
+    <label class="formLabel" for="message"
+      ><img
+        class="asteriskRequired"
+        src="../../assets/images/asterisk.svg"
+        role="presentation"
+        focusable="false"
+      />message
+      <div class="visually-hidden">required</div></label
+    >
+    <textarea
+      class="formTextarea"
+      id="message"
+      name="message"
+      required
+      placeholder="What are you looking for? Where do you want to use it? Have you a budget in mind?"
+    ></textarea>
+  </div>
+  <div>
+    <button type="submit" value="submit" class="formSubmit">Submit</button>
+  </div>
+</form>
